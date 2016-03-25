@@ -12,7 +12,7 @@ Source0:        https://github.com/locp/cassandra/archive/%{version}.tar.gz
 
 BuildArch:      noarch
 
-Requires:       puppet-apt
+#Requires:       puppet-apt
 Requires:       puppet-firewall
 Requires:       puppet-inifile
 Requires:       puppet-stdlib

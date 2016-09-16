@@ -8,7 +8,7 @@ License:        Apache-2.0
 
 URL:            http://locp.github.io/cassandra
 
-Source0:        https://github.com/locp/cassandra/archive/%{version}.tar.gz
+Source0:        https://github.com/locp/cassandra/archive/%{upstream_version}.tar.gz
 
 BuildArch:      noarch
 

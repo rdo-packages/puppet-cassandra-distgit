@@ -7,8 +7,8 @@
 
 
 Name:           puppet-cassandra
-Version:        XXX
-Release:        XXX
+Version:        1.25.2
+Release:        1%{?dist}
 Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
 License:        Apache-2.0
 
@@ -52,4 +52,7 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
 
 %changelog
+* Thu Sep 22 2016 Haikel Guemar <hguemar@fedoraproject.org> - 1.25.2-1
+- Newton update 1.25.2 (698dc80d501fc7b2cedf3d88d1c9fdb6630a2d8f)
+
 

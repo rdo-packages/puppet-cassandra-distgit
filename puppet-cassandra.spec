@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name cassandra
-%global commit 80e0f37ee2f2cb801620e5f4ffe089d21a35b573
+%global commit 0fc5e6541e888289c1ea56dc6256f23a729ee68e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-cassandra
-Version:        2.1.0
-Release:        1%{?dist}
+Version:        2.1.1
+Release:        1%{?alphatag}%{?dist}
 Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
 License:        Apache-2.0
 
@@ -52,6 +52,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
 
 %changelog
+* Tue Nov 15 2016 Alfredo Moralejo <amoralej@redhat.com> 2.1.1-1.0fc5e65.git
+- Newton update 2.1.1 (0fc5e6541e888289c1ea56dc6256f23a729ee68e)
+
 * Tue Nov 01 2016 Jon Schlueter <jschluet@redhat.com> 2.1.0-1
 - Update to 2.1.0 (80e0f37ee2f2cb801620e5f4ffe089d21a35b573)
 

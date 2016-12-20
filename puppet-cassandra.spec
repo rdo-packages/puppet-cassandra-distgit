@@ -1,31 +1,26 @@
-%{!?upstream_version: %global upstream_version %{commit}}
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %define upstream_name cassandra
-%global commit 698dc80d501fc7b2cedf3d88d1c9fdb6630a2d8f
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-# DO NOT REMOVE ALPHATAG
-%global alphatag .%{shortcommit}git
 
+Name:                   puppet-cassandra
+Version:                1.26.1
+Release:                2%{?dist}
+Summary:                Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian
+License:                Apache-2.0
 
-Name:           puppet-cassandra
-Version:        XXX
-Release:        XXX
-Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
-License:        Apache-2.0
+URL:                    https://github.com/locp/cassandra
 
-URL:            http://locp.github.io/cassandra
+Source0:                https://github.com/locp/cassandra/archive/%{version}.tar.gz
 
-Source0:        https://github.com/locp/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
+BuildArch:              noarch
 
-BuildArch:      noarch
+Requires:               puppet-firewall
+Requires:               puppet-inifile
+Requires:               puppet-stdlib
 
-#Requires:       puppet-apt
-Requires:       puppet-firewall
-Requires:       puppet-inifile
-Requires:       puppet-stdlib
-Requires:       puppet >= 2.7.0
+Requires:               puppet >= 2.7.0
 
 %description
-Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
+Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
@@ -41,7 +36,6 @@ find . \( -name spec -o -name ext \) | xargs rm -rf
 
 
 %install
-rm -rf %{buildroot}
 install -d -m 0755 %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
@@ -52,4 +46,3 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
 
 %changelog
-

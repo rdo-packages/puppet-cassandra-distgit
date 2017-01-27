@@ -10,7 +10,7 @@ Name:           puppet-cassandra
 Version:        XXX
 Release:        XXX
 Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
-License:        Apache-2.0
+License:        ASL 2.0
 
 URL:            http://locp.github.io/cassandra
 

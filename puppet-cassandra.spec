@@ -53,3 +53,4 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
 %changelog
 
+

@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name cassandra
-%global commit 698dc80d501fc7b2cedf3d88d1c9fdb6630a2d8f
+%global commit d180a6c4c2842c06acbb4ab15856cf0f866062bc
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-cassandra
-Version:        XXX
-Release:        XXX
+Version:        2.5.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
 License:        ASL 2.0
 
@@ -52,5 +52,7 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
 
 %changelog
+* Fri Aug 25 2017 Alfredo Moralejo <amoralej@redhat.com> 2.5.0-1.d180a6cgit
+- Pike update 2.5.0 (d180a6c4c2842c06acbb4ab15856cf0f866062bc)
 
 

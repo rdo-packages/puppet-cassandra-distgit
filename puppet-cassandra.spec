@@ -1,5 +1,5 @@
 %{!?upstream_version: %global upstream_version %{commit}}
-%define upstream_name cassandra
+%define upstream_name puppet-cassandra
 %global commit 698dc80d501fc7b2cedf3d88d1c9fdb6630a2d8f
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
@@ -12,9 +12,9 @@ Release:        XXX
 Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
 License:        ASL 2.0
 
-URL:            http://locp.github.io/cassandra
+URL:            https://github.com/voxpupuli/puppet-cassandra
 
-Source0:        https://github.com/locp/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
+Source0:        https://github.com/voxpupuli/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 

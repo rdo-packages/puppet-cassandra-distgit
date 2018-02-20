@@ -54,3 +54,4 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 %changelog
 
 
+# REMOVEME: error caused by commit https://github.com/voxpupuli/puppet-cassandra/commit/2454099687f5e533b553bd38b3ac7f69a864408c

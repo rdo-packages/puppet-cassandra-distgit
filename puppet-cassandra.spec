@@ -57,4 +57,3 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 - Update to post 2.7.4-rc0 (9954256a6767d51c9dec30b7e7f755bb9734c8d8)
 
 
-

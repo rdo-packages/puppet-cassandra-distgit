@@ -1,14 +1,15 @@
+%global milestone .0rc0
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name puppet-cassandra
-%global commit 698dc80d501fc7b2cedf3d88d1c9fdb6630a2d8f
+%global commit 89bf2d1d2393bb85677d95631089b2e57f15fee2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-cassandra
-Version:        XXX
-Release:        XXX
+Version:        3.1.1
+Release:        0.4%{?milestone}%{?alphatag}%{?dist}
 Summary:        Installs Cassandra, DataStax Agent & OpsCenter on RHEL/Ubuntu/Debian.
 License:        ASL 2.0
 
@@ -52,5 +53,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/cassandra/
 
 
 %changelog
+* Fri Apr 01 2022 RDO <dev@lists.rdoproject.org> 3.1.1-0.4.0rc0.89bf2d1git
+- Update to post 3.1.1-rc0 (89bf2d1d2393bb85677d95631089b2e57f15fee2)
+
 
 
